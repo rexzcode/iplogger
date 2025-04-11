@@ -26,8 +26,9 @@ app.get('/image.png', (req, res) => {
 // 🌀 Method 2: Image served as text/html (sneaky Content-Type)
 app.get('/sneaky.png', (req, res) => {
     logRequest(req, 'SNEAKY-TYPE');
-    res.set('Content-Type', 'text/html'); // Not image!
+    res.set('Content-Type', 'application/octet-stream'); // generic binary
     res.sendFile(__dirname + '/cursedemoji.png');
+
 });
 
 // 🔁 Method 3: Redirect to real image (double request test)
