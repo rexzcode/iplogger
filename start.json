@@ -1,0 +1,13 @@
+const { execSync } = require("child_process");
+const fs = require("fs");
+
+// Check if node_modules/express exists
+if (!fs.existsSync("./node_modules/express")) {
+  console.log("🔧 Express not found. Installing...");
+  execSync("npm install express", { stdio: "inherit" });
+} else {
+  console.log("✅ Express is already installed.");
+}
+
+// Now start the real app
+require("./index.js");
